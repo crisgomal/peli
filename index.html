@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joel Maria">
+    <meta name="description" content="aquesta pagina es una activitat del apartat AEA.1.1.2">
+    <meta name="keywords" content="HTML,Inscripció,Developers,Conference">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="JavaScript">
+        function Alternar(Seccion){
+	    if (Seccion.style.display=="none"){Seccion.style.display=""}
+	    else{Seccion.style.display="none"}
+        }
+    </script>
+    <title>AEA.1.1.2</title>
+</head>
+    <body>
+        <h1>Inscripció a la jornada de Blanes Developers Conference 2020</h1>
+        <section>
+            <form action="" method="POST">
+                    <fieldset>
+                        <legend>Dades de l'usuari:</legend>
+                            <div>
+                                <label for="nom">Nom:</label>
+                                <input type="text" id="nom" name="nom" autofocus required placeholder="Introduiex el teu nom"> 
+                            </div>
+                            <div>
+                                <label for="cognom">Cognom:</label>
+                                <input type="text" id="cognom" name="cognom" required placeholder="Introduiex el teu cognom">
+                            </div>
+                            <div>
+                                <label for="nif">NIF:</label>
+                                <input type="text" id="nif" name="nif" required pattern="[0-9]{8}[A-Za-z]{1}" title="Tens que introduir 8 numeros i una lletra." placeholder="Introdueix el teu NIF" >
+                            </div>
+                            <div>
+                                <label for="data">Data de naixament:</label>
+                                <input type="date" id="data" name="datanaixament">
+                            </div>
+                            <div>
+                                <label for="imagen"></label>
+                                <input type="file" name="imagen" id="imagen" accept=".png, .jpg">
+                            </div>
+                            <div>
+                                <p>Selecciona al seu sexe</p>
+                                <div>
+                                    <label for="dona">Dona</label>
+                                    <input type="radio" id="dona" name="sexe">
+                                </div>
+                                <div>
+                                    <label for="home">Home</label>
+                                    <input type="radio" id="home" name="sexe">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="adreça">Adreça: </label>
+                                <input type="text" id="adreça" name="adreça" placeholder="Introduiex la teva adreça.">
+                            </div>
+                            <div>
+                                <label for="telefon">Telefon:</label>
+                                <input type="tel" id="telefon" name="telefon" placeholder="Introduiex el teu numero de telefon.">
+                            </div>
+                            <div>
+                                <label for="email">correu electronic:</label>
+                                <input type="email" id="email" name="correu" placeholder="Introduiex el teu correu electronic">
+                            </div>
+                            <div>
+                                <p>Quin llenguatge domina:</p>
+                                <div>
+                                    <input type="checkbox" id="javascript" name="llenguatge">
+                                    <label for="javascript">JavaScript</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="python" name="llenguatge">
+                                    <label for="python">Python</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="java" name="llenguatge">
+                                    <label for="java">Java</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="c#" name="llenguatge">
+                                    <label for="c#">C#</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="php" name="llenguatge">
+                                    <label for="php">PHP</label>
+                                </div>
+                            </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Dades de la inscripció:</legend>
+                            <table border="1">
+                                <caption>Developers Conference 2020</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Hores</th>
+                                        <th>Opcions</th>
+                                    </tr>  
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>8:30 - 9:30</td>
+                                        <td>Conferencia de HTML i CSS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9:30 - 10:30</td>
+                                        <td>Conferencia de BD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:30 - 11:30</td>
+                                        <td>Conferencia de Java</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:30 - 12:30</td>
+                                        <td>Conferencia de Ll. marques</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>Escull la conferencia: </p>
+                            <select name="conferencia" id="conferencia">
+                                <option value="html/CSS">8:30 - 9:30 Conferencia de HTML i CSS</option>
+                                <option value="BD">9:30 - 10:30 Conferencia de BD</option>
+                                <option value="java">10:30 - 11:30 Conferencia de Java</option>
+                                <option value="llMarques">11:30 - 12:30 Conferencia de</option>
+                            </select>
+                            
+                            <div>
+                                <label for="si">Si estudiant:</label>
+                                <input onclick="Alternar(seccion1)" type="radio" id="si" name="opcio">
+                            </div>
+                            <div id="seccion1" style="display: none;">
+                                <label for="institut">En quin institut: </label>
+                                <input type="text" id="institut" name="institut">
+                            </div>
+                            <div>
+                                <label for="no">NO estudiant:</label>
+                                <input onclick="Alternar(seccion1)" type="radio" id="no" name="opcio" checked>
+                            </div>
+                            
+                    </fieldset>
+                    <input type="image" src="./img/enviar.png" alt="submit" width="48" height="48">
+            </form>
+        </section>
+    </body>
+</html>
